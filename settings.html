@@ -43,6 +43,45 @@
             vertical-align: bottom;
         }
 
+        .cc98-options {
+            display: none;
+            margin: 10px 0 0 30px;
+        }
+
+        .cc98-options.visible {
+            display: block;
+        }
+
+        .position-buttons {
+            display: flex;
+            gap: 8px;
+            margin-top: 6px;
+        }
+
+        .position-option input {
+            display: none;
+        }
+
+        .position-option span {
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 6px;
+            background-color: #ffffff;
+            border: 1px solid #0b6d84;
+            color: #0b6d84;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .position-option input:checked+span {
+            background-color: #0b6d84;
+            color: #ffffff;
+        }
+
+        .option-group-title {
+            margin-bottom: 6px;
+        }
+
         /* Checked state */
         .hidden-checkbox:checked+.checkmark:after {
             content: "";
@@ -69,6 +108,52 @@
             <span class="checkmark"></span>
             <span class="checkbox-text">Extension Enabled</span>
         </label>
+
+        <br><br>
+
+        <label class="fancy-checkbox">
+            <input type="checkbox" id="enableCc98" class="hidden-checkbox">
+            <span class="checkmark"></span>
+            <span class="checkbox-text">cc98</span>
+        </label>
+
+        <div id="cc98PositionOptions" class="cc98-options">
+            <div>Position</div>
+            <div class="position-buttons">
+                <label class="position-option">
+                    <input type="radio" name="cc98Position" value="left" id="cc98PositionLeft">
+                    <span>左侧</span>
+                </label>
+                <label class="position-option">
+                    <input type="radio" name="cc98Position" value="center" id="cc98PositionCenter">
+                    <span>中央</span>
+                </label>
+                <label class="position-option">
+                    <input type="radio" name="cc98Position" value="right" id="cc98PositionRight">
+                    <span>右侧</span>
+                </label>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div>
+            <div class="option-group-title">Image Source</div>
+            <div class="position-buttons">
+                <label class="position-option">
+                    <input type="checkbox" name="imageSources" value="mrbeast" id="imageSourceMrbeast">
+                    <span>mrbeast</span>
+                </label>
+                <label class="position-option">
+                    <input type="checkbox" name="imageSources" value="nailong" id="imageSourceNailong">
+                    <span>奶龙</span>
+                </label>
+                <label class="position-option">
+                    <input type="checkbox" name="imageSources" value="lieqi" id="imageSourceLieqi">
+                    <span>猎奇</span>
+                </label>
+            </div>
+        </div>
 
         <br><br>
 

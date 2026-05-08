@@ -11,15 +11,18 @@
     },
     "permissions": [
         "storage",
-        "*://*.youtube.com/*"
+        "*://*.youtube.com/*",
+        "*://cc98.org/*",
+        "*://*.cc98.org/*"
     ],
     "content_scripts": [{
-        "matches": ["*://*.youtube.com/*"],
+        "matches": ["*://*.youtube.com/*", "*://cc98.org/*", "*://*.cc98.org/*"],
         "js": ["mrbeastify.js"],
         "run_at": "document_idle"
     }],
     "web_accessible_resources": [
         "images/*.png",
+        "images/*/*.png",
         "images/*.json"
     ]
 }
